@@ -97,11 +97,47 @@ body {
   border: 1px solid #e2e8f0; 
 }
 
-@media (max-width: 480px) {
-  .box {
-    width: 90%;      
-    padding: 10px;
+@media (max-width: 768px) {
+    .trida {
+        grid-template-areas:
+            "zahlavi"
+            "menu"
+            "obsah"
+            "bocnipanel"
+            "zapati";
+        grid-template-columns: 1fr;
+    }
+
+    .galerie {
+        flex-wrap: wrap;   /* obrázky se zabalí */
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .galerie img {
+        width: 90%;       /* obrázky zabírají většinu šířky mobilu */
+        height: auto;
+    }
+
+    .box {
+        width: 90%;       /* boxy zabírají téměř celou šířku */
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    h1, h2, p {
+        font-size: 90%;   /* text menší na mobilu */
+    }
+
+    .bocnipanel {
+        text-align: left;  /* lepší čitelnost na mobilu */
+    }
+}
+
+
+
   }
 }
 
 }
+
